@@ -1,0 +1,97 @@
+.employees {
+    padding: 5% 0;
+    background-color: white;
+}
+
+.employees h1, .offers h1 {
+    width: 100%;
+    padding-bottom: 10%;
+    text-align: center;
+}
+
+.employees h1 {
+    color: #152D41;
+}
+
+.employee-container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.employee-image-round {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url(../../images/Dev\ Patel.png);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5%;
+}
+
+.employee-container:nth-of-type(2) .employee-image-round {
+    background-image: url(../../images/Rene\ Krupa.png);
+}
+
+.employee-description {
+    width: 85%;
+    text-align: justify;
+    margin-bottom: 5%;
+}
+
+.employee-description h2 {
+    padding-bottom: 5%;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .employee-container {
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .employee-container:nth-of-type(even) {
+        flex-direction: row-reverse;
+    }
+
+    .employee-container:nth-of-type(even) .employee-description{
+        text-align: right;
+    }
+
+    .employees h1, .offers h1 {
+        text-align: left;
+    }
+
+    .employee-container {
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .employee-image-round {
+        margin-bottom: 0;
+    }
+
+    .employee-description {
+        width: 65%;
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 960px;
+    }
+
+    .employee-description {
+        width: 75%;
+    }
+}
