@@ -1,5 +1,45 @@
 import React from 'react';
+import OfferBox from './OfferBox';
 import './Offers.css';
+
+const offersList = [
+    {
+        offerName: 'Rowery',
+        isNew: false, 
+    },
+    {
+        offerName: 'Buty',
+        isNew: false, 
+    },
+    {
+        offerName: 'Odzież',
+        isNew: false, 
+    },
+    {
+        offerName: 'Narzędzia',
+        isNew: true, 
+    },
+    {
+        offerName: 'Akcesoria',
+        isNew: false, 
+    },
+    {
+        offerName: 'Kaski',
+        isNew: false, 
+    },
+    {
+        offerName: 'Bagaż',
+        isNew: true, 
+    },
+    {
+        offerName: 'Części',
+        isNew: false, 
+    },
+    {
+        offerName: 'Inne',
+        isNew: false, 
+    },
+]
 
 function Offers() {
   return (
@@ -8,38 +48,9 @@ function Offers() {
             <div className="container">
                 <h1>Czym zajmuje się nasza firma?</h1>
                 <div className="offers-container">
-                    <div className="offers-container-box">
-                        <div className="offers-container-box-dot"></div>
-                        <div className="offers-container-box-content">
-                            <h2>Usługa 1</h2>
-                            <span>(nowość)</span>
-                        </div>
-                    </div>
-                    <div className="offers-container-box">
-                        <div className="offers-container-box-content">
-                            <h2>Usługa 2</h2>
-                        </div>    
-                    </div>
-                    <div className="offers-container-box">
-                        <div className="offers-container-box-content">
-                            <h2>Usługa 3</h2>
-                        </div>    
-                    </div>
-                    <div className="offers-container-box">
-                        <div className="offers-container-box-content">
-                            <h2>Usługa 4</h2>
-                        </div>    
-                    </div>
-                    <div className="offers-container-box">
-                        <div className="offers-container-box-content">
-                            <h2>Usługa 5</h2>
-                        </div>    
-                    </div>
-                    <div className="offers-container-box">
-                        <div className="offers-container-box-content">
-                            <h2>Usługa 6</h2>
-                        </div>    
-                    </div>
+                {offersList.map(offer => {
+                    return <OfferBox title={offer.offerName} isNew={offer.isNew} />
+                })}
                 </div>
             </div>
         </section>

@@ -24,14 +24,9 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-image: url(../../images/Dev\ Patel.png);
     background-position: center;
     background-size: cover;
     margin-bottom: 5%;
-}
-
-.employee-container:nth-of-type(2) .employee-image-round {
-    background-image: url(../../images/Rene\ Krupa.png);
 }
 
 .employee-description {
